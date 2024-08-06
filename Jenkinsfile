@@ -34,7 +34,7 @@ error "Pipeline aborted due to quality gate failure: ${qg.status}"
 stage('Docker Build') {
        agent any
        steps {
-        sh 'docker build -t naimishdev/spring-petclinic:latest .'
+        sh 'docker build -t -f Dockerfile naimishdev/spring-petclinic:latest .'
       }
     }
 
